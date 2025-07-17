@@ -108,11 +108,26 @@ public class MinecraftClientHandler {
 
         if (startEasyFly) {
             switch (actionStep) {
+                case EQUIP_ELYTRA -> handleEquipElytra(client);
                 case START_MOMENTUM -> handleMomentumAction(player);
                 case START_FLYING -> handleFlyingAction(player);
                 case USE_FIREWORK -> handleFireworkAction(player, gameMode);
             }
         }
+    }
+
+    private void handleEquipElytra(Minecraft client) {
+        // 如果 EASY_SWITCH 為 true，則自動裝備最佳鞘翅
+        Constants.LOGGER.info("Check Equip Elytra");
+        if (!isWearingElytra()) {
+            if (ElytraControlConfig.EASY_SWITCH.getValue()) {
+                int bestElytraSlot = ElytraEquipmentUtil.findBestElytraSlot(client);
+                if (bestElytraSlot != -1) {
+                    ElytraEquipmentUtil.equipBestElytra(client, bestElytraSlot);
+                }
+            }
+        }
+        actionStep = ActionStep.START_MOMENTUM;
     }
 
     private void handleMomentumAction(LocalPlayer player) {
@@ -138,7 +153,7 @@ public class MinecraftClientHandler {
             }
         }
         startEasyFly = false;
-        actionStep = ActionStep.START_MOMENTUM;
+        actionStep = ActionStep.EQUIP_ELYTRA;
     }
 
     private boolean canInitiateEasyFly() {
@@ -146,15 +161,27 @@ public class MinecraftClientHandler {
 
         return player != null
                 && ((client.options.keyUse.isDown() && KeyBindsRegistry.EASY_FLY.isUnbound()) || KeyBindsRegistry.EASY_FLY.consumeClick())
-                && player.onGround()
-                && player.getItemBySlot(EquipmentSlot.CHEST).is(Items.ELYTRA)
+                //&& player.onGround()
+                && (isWearingElytra() || (hasElytraInPlayerContainer() && ElytraControlConfig.EASY_SWITCH.getValue()))
                 && isCorsshairClear()
-                && !player.isInWater()
+                //&& !player.isInWater()
                 && !player.isUsingItem()
                 && !player.swinging
                 && ElytraControlConfig.EASY_FLY.getValue()
                 && shouldEasyFly
                 && !shouldDisableFlying;
+    }
+
+    private boolean hasElytraInPlayerContainer(){
+        int BestElytraSlot = ElytraEquipmentUtil.findBestElytraSlot(client);
+        return BestElytraSlot != -1;
+    }
+
+    private boolean isWearingElytra() {
+        if (client.player != null) {
+            return client.player.getItemBySlot(EquipmentSlot.CHEST).is(Items.ELYTRA);
+        }
+        return false;
     }
 
     private boolean isCorsshairClear() {

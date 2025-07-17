@@ -34,9 +34,11 @@
 
   "config.option.elytracontrol.easyFlyNotification": "Easy Fly Notification",
   "config.option.elytracontrol.easyFlyNotification.description": "Should display a notification when easy fly is enabled/disabled?",
-
   "config.option.elytracontrol.easyFly": "Easy Fly",
   "config.option.elytracontrol.easyFly.description": "Should allow player to fly using elytra easily?",
+
+  "config.option.elytracontrol.easySwitch": "Easy Switch Elytra",
+  "config.option.elytracontrol.easySwitch.description": "Should auto switch chest equipment to elytra？",
 
   "config.option.elytracontrol.disableFlyNotification": "Disable Fly Notification",
   "config.option.elytracontrol.disableFlyNotification.description": "Should display a notification when disable fly is enabled/disabled?",

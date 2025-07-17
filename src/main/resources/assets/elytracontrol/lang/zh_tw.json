@@ -1,0 +1,51 @@
+{
+  "key.elytracontrol.stopFlying": "停止飛行",
+  "key.elytracontrol.startFlying": "開始飛行",
+  "key.elytracontrol.disableFlyingToggle": "禁用飛行切換",
+  "key.elytracontrol.easyFly": "輕鬆飛行",
+  "key.categories.elytracontrol": "鞘翅控制",
+  "key.elytracontrol.easyFlyToggle": "輕鬆飛行切換",
+
+  "notification.elytracontrol.disableFlying": "禁用飛行",
+  "notification.elytracontrol.easyFly": "輕鬆飛行",
+
+  "config.screen.elytracontrol.title": "鞘翅控制設定",
+
+  "overlay.elytracontrol.disableText": "禁用飛行",
+
+  "config.option.elytracontrol.lockIconMode.textOnly": "僅文字",
+  "config.option.elytracontrol.lockIconMode.iconText": "文字和圖示",
+  "config.option.elytracontrol.lockIconMode.iconOnly": "僅圖示",
+  "config.option.elytracontrol.lockIconMode.none": "無",
+
+  "config.option.elytracontrol.overlayPosition.topLeft": "左上角",
+  "config.option.elytracontrol.overlayPosition.topRight": "右上角",
+  "config.option.elytracontrol.overlayPosition.bottomLeft": "左下角",
+  "config.option.elytracontrol.overlayPosition.bottomRight": "右下角",
+  "config.option.elytracontrol.overlayPosition.topMiddle": "上方中間",
+  "config.option.elytracontrol.overlayPosition.rightMiddle": "右方中間",
+  "config.option.elytracontrol.overlayPosition.leftMiddle": "左方中間",
+
+  "config.option.elytracontrol.defaultElytraControl": "預設鞘翅控制",
+  "config.option.elytracontrol.defaultElytraControl.description": "是否禁用預設鞘翅控制？",
+
+  "config.option.elytracontrol.allowFlying": "允許飛行",
+  "config.option.elytracontrol.allowFlying.description": "是否允許玩家使用鞘翅飛行？",
+
+  "config.option.elytracontrol.easyFlyNotification": "輕鬆飛行通知",
+  "config.option.elytracontrol.easyFlyNotification.description": "是否在啟用/禁用輕鬆飛行時顯示通知？",
+  "config.option.elytracontrol.easyFly": "輕鬆飛行",
+  "config.option.elytracontrol.easyFly.description": "是否允許玩家輕鬆使用鞘翅飛行？",
+
+  "config.option.elytracontrol.easySwitch": "輕鬆切換鞘翅",
+  "config.option.elytracontrol.easySwitch.description": "是否在輕鬆飛行時自動裝備最佳鞘翅？",
+
+  "config.option.elytracontrol.disableFlyNotification": "禁用飛行通知",
+  "config.option.elytracontrol.disableFlyNotification.description": "是否在啟用/禁用禁用飛行時顯示通知？",
+
+  "config.option.elytracontrol.lockIconMode": "鎖定圖示模式",
+  "config.option.elytracontrol.lockIconMode.description": "在僅文字、文字和圖示、僅圖示或無之間切換",
+
+  "config.option.elytracontrol.overlayPosition": "覆蓋層位置",
+  "config.option.elytracontrol.overlayPosition.description": "變更覆蓋層的位置"
+}
